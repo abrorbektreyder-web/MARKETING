@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-blue: #3b82f6;
+  --color-brand-blue-dark: #1d4ed8;
+  --color-brand-green: #10b981;
+  --color-brand-red: #ef4444;
+  --color-brand-yellow: #f59e0b;
+  --color-bg-primary: #0a0a0f;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Outfit', system-ui, sans-serif;
+}
+
+:root {
+  --background: #0a0a0f;
+  --foreground: #ffffff;
+}
+
+body {
+  background: radial-gradient(circle at top center, #1a1a2e 0%, #0a0a0f 100%);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Glass Card - More premium */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(-4px);
+}
+
+/* Primary Button */
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-brand-blue) 0%, var(--color-brand-blue-dark) 100%);
+  color: white;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+/* Selection classes */
+.selection-none {
+  user-select: none;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+}
