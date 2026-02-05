@@ -1,0 +1,1 @@
+export default function Test() { return <h1>Salom, Vercel ishlayapti </h1>; }
